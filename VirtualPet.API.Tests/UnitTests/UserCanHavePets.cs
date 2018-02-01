@@ -9,26 +9,29 @@ using Xunit;
 
 namespace VirtualPet.API.Tests.UnitTests
 {
-    public class UserCanHavePets
+    public class PetController_Tests
     {
-        [Fact]
-        public void Find_pets_by_userName()
+        public class Get
         {
-            //arrange
-            const string expectedPetName = "freddy";
-            const string userName = "jayconnerghost@gmail.com";
-            var petService = Substitute.For<IPetService>();
-            var returnedPet = new Pet {Name = "freddy"};
-            var pets = new List<Pet> {returnedPet};
-            petService.Get(userName).Returns(pets);
-            var controller=new PetController(petService);
+            [Fact]
+            public void Pet_service_is_called()
+            {
+                //arrange
+                const string expectedPetName = "freddy";
+                const string userName = "jayconnerghost@gmail.com";
+                var petService = Substitute.For<IPetService>();
+                var returnedPet = new Pet {Name = "freddy"};
+                var pets = new List<Pet> {returnedPet};
+                petService.Get(userName).Returns(pets);
+                var controller = new PetController(petService);
 
-            //act
-            var result=controller.Get(userName);
-            var pet=result.First();
+                //act
+                var result = controller.Get(userName);
+                var pet = result.First();
 
-            //assert
-            pet.Name.Should().Be(expectedPetName);
+                //assert
+                pet.Name.Should().Be(expectedPetName);
+            }
         }
     }
 }
