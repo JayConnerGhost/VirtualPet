@@ -17,4 +17,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VirtualPet.Models\VirtualPet.Models.csproj" />
+    <ProjectReference Include="..\VirtualPet.Services\VirtualPet.Services.csproj" />
+  </ItemGroup>
+
 </Project>
