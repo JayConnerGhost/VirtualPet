@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualPet.API.Tests", "..\VirtualPet.API.Tests\VirtualPet.API.Tests.csproj", "{ED32B816-4709-4850-ADD9-F70D6DB6E81B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPet.Web", "..\VirtualPet.Web\VirtualPet.Web.csproj", "{114CC89B-2F47-4EE2-A312-B99F7CAAD944}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualPet.Web", "..\VirtualPet.Web\VirtualPet.Web.csproj", "{114CC89B-2F47-4EE2-A312-B99F7CAAD944}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPet.Services", "..\VirtualPet.Services\VirtualPet.Services.csproj", "{3BE4F521-2623-4AF5-A8C8-6CA1972B6203}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualPet.Services", "..\VirtualPet.Services\VirtualPet.Services.csproj", "{3BE4F521-2623-4AF5-A8C8-6CA1972B6203}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPet.Models", "..\VirtualPet.Models\VirtualPet.Models.csproj", "{71739CED-7AC2-4203-BB89-6BCD091A2B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualPet.Models", "..\VirtualPet.Models\VirtualPet.Models.csproj", "{71739CED-7AC2-4203-BB89-6BCD091A2B68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPet.Repositories", "..\VirtualPet.Repositories\VirtualPet.Repositories.csproj", "{1D542B3E-B8F7-48F3-B71A-30B41E18DA1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{71739CED-7AC2-4203-BB89-6BCD091A2B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71739CED-7AC2-4203-BB89-6BCD091A2B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71739CED-7AC2-4203-BB89-6BCD091A2B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D542B3E-B8F7-48F3-B71A-30B41E18DA1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D542B3E-B8F7-48F3-B71A-30B41E18DA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D542B3E-B8F7-48F3-B71A-30B41E18DA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D542B3E-B8F7-48F3-B71A-30B41E18DA1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

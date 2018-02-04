@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VirtualPet.Models\VirtualPet.Models.csproj" />
-    <ProjectReference Include="..\VirtualPet.Repositories\VirtualPet.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

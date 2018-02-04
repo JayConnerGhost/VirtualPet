@@ -2,28 +2,30 @@
 using NSubstitute;
 using VirtualPet.Models;
 using VirtualPet.Services;
+using VirtualPet.Repositories;
 using Xunit;
 namespace VirtualPet.API.Tests.UnitTests.Services
 {
     public class PetFindService
     {
+      
         public class GetByUserId
         {
             [Fact]
-            public void Can_locate_pets_by_userId()
+            public void Repository_is_called_when_finding_a_pet_by_userId()
             {
                 //arrange
-                var expectedName = "freddy";
-                
+                var petRepository = Substitute.For<IPetRepository>();
+                var service=new VirtualPet.Services.PetFindService(petRepository);
                 
                 //act
-                Pet returnedPet=new Pet();
-
-
+                var returnedPet = service.GetByUserId("2");
+                
                 //assert
-                returnedPet.Should().BeOfType<Pet>();
-                returnedPet.Name.Should().Be(expectedName);
+                petRepository.ReceivedWithAnyArgs().GetByUserId(Arg.Any<string>());
             }
         }
     }
+
+  
 }
