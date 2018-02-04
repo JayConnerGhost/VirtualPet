@@ -3,9 +3,9 @@ using VirtualPet.Models;
 
 namespace VirtualPet.Services
 {
-    public class PetService:IPetService
+    public class PetFindService:IPetFindService
     {
-        public IEnumerable<Pet> Get(string userName)
+        public IEnumerable<Pet> GetByUserId(string userName)
         {
             throw new System.NotImplementedException();
         }

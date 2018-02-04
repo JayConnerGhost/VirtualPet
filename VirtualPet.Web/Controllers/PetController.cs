@@ -13,18 +13,18 @@ namespace VirtualPet.Web.Controllers
     [Route("api/Pet")]
     public class PetController : Controller
     {
-        private readonly IPetService _petService;
+        private readonly IPetFindService _petFindService;
 
-        public PetController(IPetService petService)
+        public PetController(IPetFindService petFindService)
         {
-            _petService = petService;
+            _petFindService = petFindService;
         }
 
         // GET api/pet/fred@ted.com
         [HttpGet("{userName}")]
         public IEnumerable<Pet> Get(string userName)
         {
-            return _petService.Get(userName);
+            return _petFindService.GetByUserId(userName);
         }
     }
 }

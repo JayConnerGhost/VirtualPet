@@ -3,8 +3,8 @@ using VirtualPet.Models;
 
 namespace VirtualPet.Services
 {
-    public interface IPetService
+    public interface IPetFindService
     {
-        IEnumerable<Pet> Get(string userName);
+        IEnumerable<Pet> GetByUserId(string userName);
     }
 }
