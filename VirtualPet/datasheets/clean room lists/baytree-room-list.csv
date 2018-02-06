@@ -1,0 +1,28 @@
+ROOM No,FLOOR,LOCATION ON FLOOR,ROOM SIZE,NOTES ON ROOM ,key
+1,Basement,whole floor,,Self contained flat,bn21pg-1315
+2,Basement,Front,Double,,bn21pg-1315
+3,Basement,Rear,Double,,bn21pg-1315
+4,Basement,Front,Double,,bn21pg-1315
+5,Basement,Rear,Double,,bn21pg-1315
+6,Ground,Rear,Single,,bn21pg-1315
+7,Ground,Front,Single,,bn21pg-1315
+8,Ground,Front,Single,,bn21pg-1315
+9,Ground,Rear,Single,Separate Kitchen,bn21pg-1315
+10,Ground,Front,Double,,bn21pg-1315
+11,Ground,back,Double,,bn21pg-1315
+12,Ground,back,Double,,bn21pg-1315
+13,1st,front,Double,,bn21pg-1315
+14,1st,back,Double,separate bathroom,bn21pg-1315
+15,1st,front,Double,,bn21pg-1315
+16,1st,front,Double,,bn21pg-1315
+17,1st,back,Double,,bn21pg-1315
+18,2nd,front,Double,,bn21pg-1315
+19,2nd,back,Double,separate kitchen and bathroom,bn21pg-1315
+20,2nd,front,Double,,bn21pg-1315
+21,2nd,front,Double,,bn21pg-1315
+22,2nd,back,Double,separate bathroom,bn21pg-1315
+23,3rd,front,Double,,bn21pg-1315
+24,3rd,back,Double,separate bathroom,bn21pg-1315
+25,3rd,front,Double,,bn21pg-1315
+26,3rd,front,Double,,bn21pg-1315
+27,3rd,back,Double,separate kitchen and bathroom,bn21pg-1315

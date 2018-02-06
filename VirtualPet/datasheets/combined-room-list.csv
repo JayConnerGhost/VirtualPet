@@ -1,0 +1,121 @@
+ROOM No,FLOOR,LOCATION ON FLOOR,ROOM SIZE,NOTES ON ROOM ,key
+1,Basement,whole floor,,Self contained flat,bn21pg-1315
+2,Basement,Front,Double,,bn21pg-1315
+3,Basement,Rear,Double,,bn21pg-1315
+4,Basement,Front,Double,,bn21pg-1315
+5,Basement,Rear,Double,,bn21pg-1315
+6,Ground,Rear,Single,,bn21pg-1315
+7,Ground,Front,Single,,bn21pg-1315
+8,Ground,Front,Single,,bn21pg-1315
+9,Ground,Rear,Single,Separate Kitchen,bn21pg-1315
+10,Ground,Front,Double,,bn21pg-1315
+11,Ground,back,Double,,bn21pg-1315
+12,Ground,back,Double,,bn21pg-1315
+13,1st,front,Double,,bn21pg-1315
+14,1st,back,Double,separate bathroom,bn21pg-1315
+15,1st,front,Double,,bn21pg-1315
+16,1st,front,Double,,bn21pg-1315
+17,1st,back,Double,,bn21pg-1315
+18,2nd,front,Double,,bn21pg-1315
+19,2nd,back,Double,separate kitchen and bathroom,bn21pg-1315
+20,2nd,front,Double,,bn21pg-1315
+21,2nd,front,Double,,bn21pg-1315
+22,2nd,back,Double,separate bathroom,bn21pg-1315
+23,3rd,front,Double,,bn21pg-1315
+24,3rd,back,Double,separate bathroom,bn21pg-1315
+25,3rd,front,Double,,bn21pg-1315
+26,3rd,front,Double,,bn21pg-1315
+27,3rd,back,Double,separate kitchen and bathroom,bn21pg-1315
+1,Basement,back,SINGLE,,bn12pg-45
+2,Basement,back,SINGLE,,bn12pg-45
+3,Basement,front,SINGLE,,bn12pg-45
+4,Basement,front,DOUBLE,,bn12pg-45
+5,Basement,back,SINGLE,,bn12pg-45
+6,Basement,back,SINGLE,,bn12pg-45
+7,Ground,front,DOUBLE,,bn12pg-45
+8,Ground,back,SINGLE,,bn12pg-45
+9,Ground,front,DOUBLE,,bn12pg-45
+10,Ground,back,SINGLE,,bn12pg-45
+11,Ground,back,SINGLE,,bn12pg-45
+12,1st,back,SINGLE,,bn12pg-45
+13,1st,front,DOUBLE,,bn12pg-45
+14,1st,back,SINGLE,,bn12pg-45
+15,1st,front,DOUBLE,,bn12pg-45
+16,2nd,front,SINGLE,,bn12pg-45
+17,2nd,back,SINGLE,,bn12pg-45
+18,2nd,front,SINGLE,,bn12pg-45
+19,2nd,front,SINGLE,,bn12pg-45
+20,2nd,front,SINGLE,,bn12pg-45
+21,2nd,back,SINGLE,,bn12pg-45
+22,3rd,back,SINGLE,,bn12pg-45
+23,3rd,front,SINGLE,,bn12pg-45
+24,3rd,front,SINGLE,,bn12pg-45
+25,4th,back,SINGLE,,bn12pg-45
+26,4th,front,SINGLE,,bn12pg-45
+27,4th,front,SINGLE,,bn12pg-45
+28,4th,back,SINGLE,,bn12pg-45
+29,4th,front,SINGLE,,bn12pg-45
+30,4th,back,DOUBLE,,bn12pg-45
+31,4th,front,DOUBLE,,bn12pg-45
+1,LGF,Front,SINGLE,"LARGE, SELF CONTAINED",bn21fa-35
+2,LGF,Rear,SINGLE,SELF CONTAINED,bn21fa-35
+3,LGF,Rear,DOUBLE,SELF CONTAINED,bn21fa-35
+4,LGF,Rear,DOUBLE,SELF CONTAINED,bn21fa-35
+5,LGF,Front,DOUBLE,SELF CONTAINED,bn21fa-35
+6,LGF,Rear,SINGLE,SELF CONTAINED,bn21fa-35
+7,LGF,Rear,SINGLE,SELF CONTAINED,bn21fa-35
+8,LGF,Front,DOUBLE,SELF CONTAINED,bn21fa-35
+9,LGF,Rear,DOUBLE,SELF CONTAINED,bn21fa-35
+10,GF,Rear,SINGLE,SELF CONTAINED,bn21fa-35
+11,GF,Rear,SINGLE,SELF CONTAINED,bn21fa-35
+12,GF,Front,SINGLE,SELF CONTAINED,bn21fa-35
+13,GF,Front,SINGLE,SELF CONTAINED,bn21fa-35
+14,GF,Rear,SINGLE,"NEXT TO OFFICE, SELF CONTAINED",bn21fa-35
+15,GF,Rear,SINGLE,SELF CONTAINED,bn21fa-35
+16,GF,Front,SINGLE,"NEXT TO OFFICE, SELF CONTAINED",bn21fa-35
+17,GF,Front,SINGLE,"SMALL, SELF CONTAINED",bn21fa-35
+18,GF,Rear,SINGLE,"SMALL, SELF CONTAINED",bn21fa-35
+19,GF,Rear,DOUBLE,SELF CONTAINED,bn21fa-35
+20,1st,Rear,SINGLE,"HALF LANDING, SHOWER AND LOO UP A FLIGHT OF STAIRS",bn21fa-35
+21,1st,Back,SINGLE,SELF CONTAINED,bn21fa-35
+22,1st,Front,DOUBLE,SELF CONTAINED,bn21fa-35
+23,1st,Front,SINGLE,SELF CONTAINED,bn21fa-35
+24,1st,Back,SINGLE,SELF CONTAINED,bn21fa-35
+25,1st,Front,SINGLE,SELF CONTAINED,bn21fa-35
+26,1st,Front,SINGLE,SELF CONTAINED,bn21fa-35
+27,1st,Back,SINGLE,SELF CONTAINED,bn21fa-35
+28,1st,Front,SINGLE,SELF CONTAINED,bn21fa-35
+29,1st,Front,SINGLE,SELF CONTAINED,bn21fa-35
+30,1st,Back,SINGLE,SHOWER AND LOO UP A FLIGHT OF STAIRS,bn21fa-35
+31,2nd,Back,SINGLE,"HALF LANDING, SELF CONTAINED",bn21fa-35
+32,2nd,Back,SINGLE,SELF CONTAINED,bn21fa-35
+33,2nd,Front,SINGLE,SELF CONTAINED,bn21fa-35
+34,2nd,Front,SINGLE,SELF CONTAINED,bn21fa-35
+35,2nd,Back,SINGLE,SELF CONTAINED,bn21fa-35
+36,2nd,Front,SINGLE,SELF CONTAINED,bn21fa-35
+37,2nd,Front,DOUBLE,SELF CONTAINED,bn21fa-35
+38,2nd,back,SINGLE,"HALF LANDING, SELF CONTAINED",bn21fa-35
+39,2nd,back,,SELF CONTAINED,bn21fa-35
+40,2nd,front,SINGLE,SELF CONTAINED,bn21fa-35
+41,2nd,front,SINGLE,SELF CONTAINED,bn21fa-35
+42,2nd,back,SINGLE,"HALF LANDING, SELF CONTAINED",bn21fa-35
+43,3rd,back,SINGLE,SELF CONTAINED,bn21fa-35
+44,3rd,front,SINGLE,SELF CONTAINED,bn21fa-35
+45,3rd,front,SINGLE,SELF CONTAINED,bn21fa-35
+46,3rd,back,SINGLE,SELF CONTAINED,bn21fa-35
+47,3rd,front,DOUBLE,SELF CONTAINED,bn21fa-35
+48,3rd,front,SINGLE,SELF CONTAINED,bn21fa-35
+49,3rd,back,SINGLE,SELF CONTAINED,bn21fa-35
+50,3rd,front,SINGLE,SELF CONTAINED,bn21fa-35
+51,3rd,front,SINGLE,SELF CONTAINED,bn21fa-35
+52,4th,back,SINGLE,SELF CONTAINED,bn21fa-35
+53,4th,front,DOUBLE,SELF CONTAINED,bn21fa-35
+54,4th,front,DOUBLE,SELF CONTAINED,bn21fa-35
+55,4th,back,SINGLE,SELF CONTAINED,bn21fa-35
+56,4th,front,SINGLE,SELF CONTAINED,bn21fa-35
+57,4th,front,SINGLE,SELF CONTAINED,bn21fa-35
+58,4th,front,SINGLE,SELF CONTAINED,bn21fa-35
+59,4th,back,SINGLE,SELF CONTAINED,bn21fa-35
+60,4th,front ,DOUBLE,SELF CONTAINED,bn21fa-35
+61,Ground,Front,SINGLE,SELF CONTAINED,bn21fa-35
+62,Ground,Front,SINGLE,SEPARATE SHOWER ROOM ,bn21fa-35

@@ -1,0 +1,54 @@
+{
+  "_id": {
+    "$oid": "59edc846a91c3e34bbc0685a"
+  },
+  "ROOM No": 1,
+  "NAME": null,
+  "MOVE IN DATE": null,
+  "TELEPHONE NUMBER": null,
+  "EMAIL": null,
+  "VOID DATE": null,
+  "FLOOR": "Basement",
+  "LOCATION ON FLOOR": "whole floor",
+  "Entrance From House No": "separate entrance",
+  "ROOM SIZE": null,
+  "NOTES ON ROOM": "Self contained flat",
+  "key": "bn21pg-1315"
+},
+{"_id": {"$oid": "59edc846a91c3e34bbc0685b"}, "ROOM No" : 2, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE" : null, "FLOOR": "Basement", "LOCATION ON FLOOR": "Front", "Entrance From House No": "13", "ROOM SIZE": "Double", "NOTES ON ROOM" : null, "key": "bn21pg-1315"},
+{"_id" : {"$oid": "59edc846a91c3e34bbc0685c"}, "ROOM No": 3, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER" : null, "EMAIL": null, "VOID DATE": null, "FLOOR": "Basement", "LOCATION ON FLOOR": "Rear", "Entrance From House No" : "13", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315"
+},
+{
+"_id": { "$oid": "59edc846a91c3e34bbc0685d"}, "ROOM No": 4, "NAME" : null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR" : "Basement", "LOCATION ON FLOOR": "Front", "Entrance From House No": "separate entrance", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key" : "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc0685e"}, "ROOM No": 5, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL" : null, "VOID DATE": null, "FLOOR": "Basement", "LOCATION ON FLOOR": "Rear", "Entrance From House No": "separate entrance", "ROOM SIZE" : "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315" },
+{"_id": {"$oid": "59edc846a91c3e34bbc0685f"}, "ROOM No": 6, "NAME": null, "MOVE IN DATE" : null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR": "Ground", "LOCATION ON FLOOR" : "Rear", "Entrance From House No": "15", "ROOM SIZE": "Single", "NOTES ON ROOM": null, "key": "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc06860"}, "ROOM No" : 7, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE" : null, "FLOOR": "Ground", "LOCATION ON FLOOR": "Front", "Entrance From House No": "15", "ROOM SIZE": "Single", "NOTES ON ROOM" : null, "key": "bn21pg-1315"},
+{"_id" : {"$oid": "59edc846a91c3e34bbc06861"}, "ROOM No": 8, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER" : null, "EMAIL": null, "VOID DATE": null, "FLOOR": "Ground", "LOCATION ON FLOOR": "Front", "Entrance From House No" : "13", "ROOM SIZE": "Single", "NOTES ON ROOM": null, "key": "bn21pg-1315"
+},
+{
+"_id": { "$oid": "59edc846a91c3e34bbc06862"}, "ROOM No": 9, "NAME" : null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR" : "Ground", "LOCATION ON FLOOR": "Rear", "Entrance From House No": "14", "ROOM SIZE": "Single", "NOTES ON ROOM": "Separate Kitchen", "key" : "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc06863"}, "ROOM No": 10, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL" : null, "VOID DATE": null, "FLOOR": "Ground", "LOCATION ON FLOOR": "Front", "Entrance From House No": "13", "ROOM SIZE" : "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315" },
+{"_id": {"$oid": "59edc846a91c3e34bbc06864"}, "ROOM No": 11, "NAME": null, "MOVE IN DATE" : null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR": "Ground", "LOCATION ON FLOOR" : "back", "Entrance From House No": "13", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc06865"}, "ROOM No" : 12, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE" : null, "FLOOR": "Ground", "LOCATION ON FLOOR": "back", "Entrance From House No": "13", "ROOM SIZE": "Double", "NOTES ON ROOM" : null, "key": "bn21pg-1315"},
+{"_id" : {"$oid": "59edc846a91c3e34bbc06866"}, "ROOM No": 13, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER" : null, "EMAIL": null, "VOID DATE": null, "FLOOR": "1st", "LOCATION ON FLOOR": "front", "Entrance From House No" : "13", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315"
+},
+{
+"_id": { "$oid": "59edc846a91c3e34bbc06867"}, "ROOM No": 14, "NAME" : null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR" : "1st", "LOCATION ON FLOOR": "back", "Entrance From House No": "13", "ROOM SIZE": "Double", "NOTES ON ROOM": "separate bathroom", "key" : "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc06868"}, "ROOM No": 15, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL" : null, "VOID DATE": null, "FLOOR": "1st", "LOCATION ON FLOOR": "front", "Entrance From House No": "13", "ROOM SIZE" : "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315" },
+{"_id": {"$oid": "59edc846a91c3e34bbc06869"}, "ROOM No": 16, "NAME": null, "MOVE IN DATE" : null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR": "1st", "LOCATION ON FLOOR" : "front", "Entrance From House No": "15", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc0686a"}, "ROOM No" : 17, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE" : null, "FLOOR": "1st", "LOCATION ON FLOOR": "back", "Entrance From House No": "15", "ROOM SIZE": "Double", "NOTES ON ROOM" : null, "key": "bn21pg-1315"},
+{"_id" : {"$oid": "59edc846a91c3e34bbc0686b"}, "ROOM No": 18, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER" : null, "EMAIL": null, "VOID DATE": null, "FLOOR": "2nd", "LOCATION ON FLOOR": "front", "Entrance From House No" : "15", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315"
+},
+{
+"_id": { "$oid": "59edc846a91c3e34bbc0686c"}, "ROOM No": 19, "NAME" : null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR" : "2nd", "LOCATION ON FLOOR": "back", "Entrance From House No": "15", "ROOM SIZE": "Double", "NOTES ON ROOM": "separate kitchen and bathroom", "key" : "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc0686d"}, "ROOM No": 20, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL" : null, "VOID DATE": null, "FLOOR": "2nd", "LOCATION ON FLOOR": "front", "Entrance From House No": "13", "ROOM SIZE" : "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315" },
+{"_id": {"$oid": "59edc846a91c3e34bbc0686e"}, "ROOM No": 21, "NAME": null, "MOVE IN DATE" : null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR": "2nd", "LOCATION ON FLOOR" : "front", "Entrance From House No": "13", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc0686f"}, "ROOM No" : 22, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE" : null, "FLOOR": "2nd", "LOCATION ON FLOOR": "back", "Entrance From House No": "13", "ROOM SIZE": "Double", "NOTES ON ROOM" : "separate bathroom", "key": "bn21pg-1315"},
+{"_id" : {"$oid": "59edc846a91c3e34bbc06870"}, "ROOM No": 23, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER" : null, "EMAIL": null, "VOID DATE": null, "FLOOR": "3rd", "LOCATION ON FLOOR": "front", "Entrance From House No" : "13", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315"
+},
+{
+"_id": { "$oid": "59edc846a91c3e34bbc06871"}, "ROOM No": 24, "NAME" : null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR" : "3rd", "LOCATION ON FLOOR": "back", "Entrance From House No": "13", "ROOM SIZE": "Double", "NOTES ON ROOM": "separate bathroom", "key" : "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc06872"}, "ROOM No": 25, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL" : null, "VOID DATE": null, "FLOOR": "3rd", "LOCATION ON FLOOR": "front", "Entrance From House No": "13", "ROOM SIZE" : "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315" },
+{"_id": {"$oid": "59edc846a91c3e34bbc06873"}, "ROOM No": 26, "NAME": null, "MOVE IN DATE" : null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE": null, "FLOOR": "3rd", "LOCATION ON FLOOR" : "front", "Entrance From House No": "15", "ROOM SIZE": "Double", "NOTES ON ROOM": null, "key": "bn21pg-1315"},
+{"_id": {"$oid": "59edc846a91c3e34bbc06874"}, "ROOM No" : 27, "NAME": null, "MOVE IN DATE": null, "TELEPHONE NUMBER": null, "EMAIL": null, "VOID DATE" : null, "FLOOR": "3rd", "LOCATION ON FLOOR": "back", "Entrance From House No": "15", "ROOM SIZE": "Double", "NOTES ON ROOM": "separate kitchen and bathroom", "key": "bn21pg-1315"
+}

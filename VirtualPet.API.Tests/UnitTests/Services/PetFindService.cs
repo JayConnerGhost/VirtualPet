@@ -24,6 +24,17 @@ namespace VirtualPet.API.Tests.UnitTests.Services
                 //assert
                 petRepository.ReceivedWithAnyArgs().GetByUserId(Arg.Any<string>());
             }
+
+            [Fact]
+            public void Repository_can_find_pets_by_userId()
+            {
+                //arrange
+                //TODO -> inmemory repo 
+                
+                //act
+
+                //Assert
+            }
         }
     }
 
