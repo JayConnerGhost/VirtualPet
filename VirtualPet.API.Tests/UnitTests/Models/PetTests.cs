@@ -6,7 +6,7 @@ using Xunit;
 
 namespace VirtualPet.API.Tests.UnitTests.Models
 {
-    public class Pet
+     public class PetTests
     {
         public class Equality
         {

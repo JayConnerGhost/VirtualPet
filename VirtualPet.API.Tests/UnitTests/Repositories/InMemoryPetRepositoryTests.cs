@@ -9,7 +9,7 @@ using Xunit;
 
 namespace VirtualPet.API.Tests.UnitTests.Repositories
 {
-    public class InMemoryPetRepository
+     public class InMemoryPetRepositoryTests
     {
       
         public class GetByUserId
