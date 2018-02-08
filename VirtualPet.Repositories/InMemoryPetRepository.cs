@@ -8,9 +8,9 @@ namespace VirtualPet.Repositories
     {
         private readonly List<Pet> _listOfPets;
 
-        public InMemoryPetRepository(List<Pet> listOfPets)
+        public InMemoryPetRepository(IPets listOfPets)
         {
-            _listOfPets = listOfPets;
+            _listOfPets = (List<Pet>) listOfPets;
         }
 
         public IEnumerable<Pet> GetByUserId(string userName)

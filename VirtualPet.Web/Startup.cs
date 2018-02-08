@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using VirtualPet.Models;
+using VirtualPet.Repositories;
 using VirtualPet.Services;
 
 namespace VirtualPet.Web
@@ -25,6 +27,8 @@ namespace VirtualPet.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<IPets, Pets>();
+            services.AddSingleton<IPetRepository, InMemoryPetRepository>();
             services.AddTransient<IPetFindService, PetFindService>();
         }
 
