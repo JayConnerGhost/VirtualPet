@@ -21,7 +21,7 @@ namespace VirtualPet.API.Tests.UnitTests.Repositories
                 var userId="test@tango.com";
 
                 //act
-                var count=new VirtualPet.Repositories.InMemoryPetRepository(new List<Pet>
+                var count=new VirtualPet.Repositories.InMemoryPetRepository((Pets)new List<Pet>
                 {
                     new Pet
                       {
@@ -62,7 +62,7 @@ namespace VirtualPet.API.Tests.UnitTests.Repositories
                 const string expectedPetName="freddy";
                 const string  expectedPetType="Cat";
                 const string userId = "test@tango.com";
-                var listOfPets=new List<Pet>
+                var listOfPets = (Pets)new List<Pet>
                 {
                     new Pet
                     {

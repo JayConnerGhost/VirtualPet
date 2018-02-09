@@ -21,13 +21,25 @@ namespace VirtualPet.Web
             Configuration = configuration;
         }
 
+        private Pets SeedData()
+        {
+            return new Pets
+            {
+                new Pet
+                {
+                    Owner = "jayconnerghost@gmail.com",
+                    Name = "fred"
+                }
+            };
+        }
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<IPets, Pets>();
+            services.AddSingleton<IPets>(SeedData());
             services.AddSingleton<IPetRepository, InMemoryPetRepository>();
             services.AddTransient<IPetFindService, PetFindService>();
         }

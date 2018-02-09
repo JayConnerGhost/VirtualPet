@@ -70,9 +70,9 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 pet.Name.Should().Be(expectedPetName);
             }
 
-            private List<Pet> PrepareData(string userId)
+            private IPets PrepareData(string userId)
             {
-                return new List<Pet>
+                return (Pets) new List<Pet>
                 {
                     new Pet
                     {

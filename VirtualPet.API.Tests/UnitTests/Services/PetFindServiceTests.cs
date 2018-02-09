@@ -32,7 +32,7 @@ namespace VirtualPet.API.Tests.UnitTests.Services
             {
                 const string userId="test@tang.com";
                 //arrange + act
-                var count= new VirtualPet.Services.PetFindService(new InMemoryPetRepository(new List<Pet>
+                var count= new VirtualPet.Services.PetFindService(new InMemoryPetRepository((Pets)new List<Pet>
                     {
                         new Pet
                         {
