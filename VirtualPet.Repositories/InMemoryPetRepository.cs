@@ -17,5 +17,10 @@ namespace VirtualPet.Repositories
         {
            return _listOfPets.FindAll(x => x.Owner == userName);
         }
+
+        Pet IPetRepository.GetByUserIdandPetName(string UserName, string petName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

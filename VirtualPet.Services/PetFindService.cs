@@ -17,5 +17,10 @@ namespace VirtualPet.Services
         {
            return _petRepository.GetByUserId(userName);
         }
+
+        public Pet GetByIdentifier(PetIdentifier pet)
+        {
+            return _petRepository.GetByUserIdandPetName(pet.UserId, pet.PetName);
+        }
     }
 }

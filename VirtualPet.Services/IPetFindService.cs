@@ -6,5 +6,6 @@ namespace VirtualPet.Services
     public interface IPetFindService
     {
         IEnumerable<Pet> GetByUserId(string userName);
+        Pet GetByIdentifier(PetIdentifier pet);
     }
 }

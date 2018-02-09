@@ -7,6 +7,7 @@ namespace VirtualPet.Models
         public string Name { get; set; }
         public string Type { get; set; }
         public string Owner { get; set; }
+        public double Happiness { get; set; }
 
         public bool Equals(Pet other)
         {
