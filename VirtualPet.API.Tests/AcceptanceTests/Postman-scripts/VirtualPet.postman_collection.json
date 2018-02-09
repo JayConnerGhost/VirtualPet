@@ -1,0 +1,39 @@
+{
+	"info": {
+		"name": "VirtualPet",
+		"_postman_id": "b4f85759-f5c4-ee79-4f1a-a5a145ceeb00",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserHasPets",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:53864/api/pet/jayconnerghost@gmail.com",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:53864/api/pet/jayconnerghost@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "53864",
+							"path": [
+								"api",
+								"pet",
+								"jayconnerghost@gmail.com"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

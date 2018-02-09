@@ -28,7 +28,8 @@ namespace VirtualPet.Web
                 new Pet
                 {
                     Owner = "jayconnerghost@gmail.com",
-                    Name = "fred"
+                    Name = "fred",
+                    Type = "Dog"
                 }
             };
         }
