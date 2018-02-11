@@ -24,7 +24,7 @@ namespace VirtualPet.API.Tests.AcceptanceTests.Startup
                 const string expectedName="fred";
 
                 //act
-                var response = await _client.GetAsync("/api/pet/jayconnerghost@gmail.com");
+                var response = await _client.GetAsync("/api/pets/jayconnerghost@gmail.com");
                 response.EnsureSuccessStatusCode();
                 var responseString = await response.Content.ReadAsStringAsync();
                 //assert

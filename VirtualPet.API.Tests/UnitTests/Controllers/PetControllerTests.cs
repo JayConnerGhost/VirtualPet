@@ -1,8 +1,7 @@
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text;
 using FluentAssertions;
-using NSubstitute;
-using VirtualPet.Models;
 using VirtualPet.Repositories;
 using VirtualPet.Services;
 using VirtualPet.Web.Controllers;
@@ -10,29 +9,29 @@ using Xunit;
 
 namespace VirtualPet.API.Tests.UnitTests.Controllers
 {
-     public class PetControllerTests
+    public class PetControllerTests
     {
-        public class Get
+        [Fact]
+        public void Can_retrieve_a_pet()
         {
-            [Fact]
-            public void Can_get_pets_for_user()
-            {
-                //arrange
-                const string userName = "jayconnerghost@gmail.com";
-                var preparedData = PetDataUtilities.PetsData(userName);
-                var repository = new InMemoryPetRepository(preparedData);
-                var service = new PetFindService(repository);
-                var controller = new PetsController(service);
+            //arrange
+            const string petName = "Tom";
+            const string owner = "jay@codegenie.com";
+            const string type = "Cat";
 
-                //act
-                var result = controller.Get(userName);
-                var count = result.Count();
+            var repository = new InMemoryPetRepository(PetDataUtilities.PetsData(owner));
+            var service = new PetFindService(repository);
+            var controller=new PetController(service);
 
-                //assert
-                count.Should().Be(2);
-            }
+            //act
+            var returnedPet=controller.Get(owner,petName);
 
-           
+
+
+            //Assert
+            returnedPet.Name.Should().Be(petName);
+            returnedPet.Owner.Should().Be(owner);
+            returnedPet.Type.Should().Be(type);
         }
     }
 }
