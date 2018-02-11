@@ -10,30 +10,21 @@ using VirtualPet.Services;
 namespace VirtualPet.Web.Controllers
 {
     [Produces("application/json")]
-    [Route("api/pet")]
-    public class PetController : Controller
+    [Route("api/Pets")]
+    public class PetsController : Controller
     {
-
         private readonly IPetFindService _petFindService;
 
-        public PetController(IPetFindService petFindService)
+        public PetsController(IPetFindService petFindService)
         {
             _petFindService = petFindService;
         }
-
-        [Route("{userId}/{petName}")]
-        [HttpGet()]
-        public Pet Get(string userId, string petName)
+        
+        // GET api/pet/fred@ted.com
+        [HttpGet("{userName}")]
+        public IEnumerable<Pet> Get(string userName)
         {
-            return _petFindService.GetByIdentifier(new PetIdentifier
-            {
-                PetName = petName,
-                UserId = userId
-            });
-            
+            return _petFindService.GetByUserId(userName);
         }
     }
-
- 
-
 }

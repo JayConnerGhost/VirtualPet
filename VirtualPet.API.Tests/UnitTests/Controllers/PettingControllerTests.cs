@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FluentAssertions;
 using VirtualPet.Models;
 using VirtualPet.Repositories;
 using VirtualPet.Services;
@@ -17,7 +18,7 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Happiness_of_pet_increases_when_petted()
             {
                 //arrange
-                const string ownerId="yim@test.com";
+                const string ownerId = "jayconnerghost@gmail.com";
                 const string petName="ted";
                 var pet = new Pet
                 {
@@ -26,10 +27,16 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                     Type = "Cat",
                     Happiness = 0.0
                 };
+
+                var petRepository=new InMemoryPetRepository(PetDataUtilities.PetsData(ownerId));
+                var petFindService =new PetFindService(petRepository);
+                var petController=new PetController(petFindService);
+
                 //act
-               
+
                 //assert
-              
+                var petReturned=petController.Get(ownerId,petName);
+               // petReturned.Should().Be();
 
             }
         }
