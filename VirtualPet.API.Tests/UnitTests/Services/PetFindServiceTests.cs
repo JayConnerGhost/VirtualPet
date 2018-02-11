@@ -32,6 +32,29 @@ namespace VirtualPet.API.Tests.UnitTests.Services
                 //assert
                 petRepository.ReceivedWithAnyArgs().GetByUserIdandPetName(Arg.Any<string>(), Arg.Any<string>());
             }
+
+            [Fact]
+            public void Can_find_pet_by_userId_and_PetName()
+            {
+                //arrange
+                const string petName = "Tom";
+                const string userId = "test@test.com";
+                const string petType = "Cat";
+                var petRepository =new InMemoryPetRepository(PetDataUtilities.PetsData(userId));
+                var service = new VirtualPet.Services.PetFindService(petRepository);
+                //act
+                var returnedPet=service.GetByIdentifier(new PetIdentifier
+                {
+                    PetName=petName,
+                    UserId=userId
+                } );
+
+                //assert
+                returnedPet.Name.Should().Be(petName);
+                returnedPet.Owner.Should().Be(userId);
+                returnedPet.Type.Should().Be(petType);
+
+            }
         }
       
         public class GetByUserId
@@ -55,35 +78,14 @@ namespace VirtualPet.API.Tests.UnitTests.Services
             {
                 const string userId="test@tang.com";
                 //arrange + act
-                var count= new VirtualPet.Services.PetFindService(new InMemoryPetRepository(PetsData(userId)
+                var count= new VirtualPet.Services.PetFindService(new InMemoryPetRepository(PetDataUtilities.PetsData(userId)
                 )).GetByUserId(userId).Count();
                 
                 //Assert
                 count.Should().Be(2);
             }
 
-            private static Pets PetsData(string userId)
-            {
-                return new Pets
-                {
-                    new Pet
-                    {
-                        Owner="fred@golf.com"
-                    },
-                    new Pet
-                    {
-                        Owner="him@her.com"
-                    },
-                    new Pet
-                    {
-                        Owner=userId
-                    },
-                    new Pet
-                    {
-                        Owner=userId
-                    }
-                };
-            }
+            
         }
     }
 

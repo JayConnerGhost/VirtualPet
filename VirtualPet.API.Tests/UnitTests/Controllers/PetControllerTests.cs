@@ -18,15 +18,15 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Can_get_pets_for_user()
             {
                 //arrange
-                const string  userName="jayconnerghost@gmail.com";
-                var preparedData = PrepareData(userName);
+                const string userName = "jayconnerghost@gmail.com";
+                var preparedData = PetDataUtilities.PetsData(userName);
                 var repository = new InMemoryPetRepository(preparedData);
-                var service=new PetFindService(repository);
-                var controller=new PetController(service);
+                var service = new PetFindService(repository);
+                var controller = new PetController(service);
 
                 //act
-                var result=controller.Get(userName);
-                var count=result.Count();
+                var result = controller.Get(userName);
+                var count = result.Count();
 
                 //assert
                 count.Should().Be(2);
@@ -36,17 +36,17 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Can_get_pet_for_user()
             {
                 //arrange
-                const string  expectedPetName= "spinny";
-                var userName="jayconnerghost@gmail.com";
-                var repository=new InMemoryPetRepository(PrepareData(userName));
-                var service=new PetFindService(repository);
-                var controller=new PetController(service);
+                const string expectedPetName = "Tom";
+                var userName = "jayconnerghost@gmail.com";
+                var repository = new InMemoryPetRepository(PetDataUtilities.PetsData(userName));
+                var service = new PetFindService(repository);
+                var controller = new PetController(service);
 
                 //act
-                var result=controller.Get(userName);
+                var result = controller.Get(userName);
 
                 //assert
-                var pet=result.First(x=>x.Name==expectedPetName);
+                var pet = result.First(x => x.Name == expectedPetName);
                 pet.Name.Should().Be(expectedPetName);
             }
 
@@ -68,45 +68,6 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
 
                 //assert
                 pet.Name.Should().Be(expectedPetName);
-            }
-
-            private IPets PrepareData(string userId)
-            {
-                return (Pets) new List<Pet>
-                {
-                    new Pet
-                    {
-                        Owner="test@rink.com",
-                        Name = "freddy",
-                        Type ="Cat"
-                    },
-                    new Pet
-                    {
-                        Owner="test@findr.com",
-                        Name = "ted",
-                        Type ="Snake"
-                    },
-                    new Pet
-                    {
-                        Owner="test@clink.com",
-                        Name = "tom",
-                        Type ="Dog"
-                    },
-                    new Pet
-                    {
-                        Owner=userId,
-                        Name = "teddy",
-                        Type ="Dog"
-                    },
-                    new Pet
-                    {
-                        Owner=userId,
-                        Name = "spinny",
-                        Type ="Gecko"
-                    }
-
-                };
-
             }
         }
     }
