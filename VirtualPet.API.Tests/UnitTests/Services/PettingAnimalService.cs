@@ -11,32 +11,38 @@ namespace VirtualPet.API.Tests.UnitTests.Services
         public class Pet
         {
             [Fact]
-            public void Pet_happiness_increases_when_petted()
+            public void Animal_happiness_increases_when_petted()
             {
                 //arrange
                 const string userId="jayconnerghost@gmail.com";
                 const string petName="eddy";
                 var data = AnimalDataUtilities.AnimalData(userId);
-                var petFindService = new AnimalFindService(new InMemoryAnimalRepository(data));
-
+                var inMemoryAnimalRepository = new InMemoryAnimalRepository(data);
+                var animalFindService = new AnimalFindService(inMemoryAnimalRepository);
+                var animalPettingService = new AnimalPettingService(animalFindService, inMemoryAnimalRepository);
                 //preCondition-Check
-                var petPrePetting = petFindService.GetByIdentifier(new AnimalIdentifier
+                var petPrePetting = animalFindService.GetByIdentifier(new AnimalIdentifier
                 {
                     UserId = userId,
                     AnimalName = petName
                 });
                 petPrePetting.Happiness.Should().Be(0);
+
                 //act
-
-
-
-                //assert
-                var petPostPetting = petFindService.GetByIdentifier(new AnimalIdentifier
+                animalPettingService.Pet(new AnimalIdentifier
                 {
                     UserId = userId,
                     AnimalName = petName
                 });
-                petPostPetting.Happiness.Should().Be(1);
+
+
+                //assert
+                var petPostPetting = animalFindService.GetByIdentifier(new AnimalIdentifier
+                {
+                    UserId = userId,
+                    AnimalName = petName
+                });
+                petPostPetting.Happiness.Should().Be(2);
             }
         }
     }

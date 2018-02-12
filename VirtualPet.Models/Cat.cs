@@ -4,7 +4,7 @@
     {
         public override void Pet()
         {
-            throw new System.NotImplementedException();
+            Happiness = (Happiness + 2);
         }
     }
 }
