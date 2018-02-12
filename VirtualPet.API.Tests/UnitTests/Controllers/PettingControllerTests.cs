@@ -15,28 +15,26 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
         public class Set
         {
             [Fact]
-            public void Happiness_of_pet_increases_when_petted()
+            public void Happiness_of_animal_increases_when_petted()
             {
                 //arrange
-                const string ownerId = "jayconnerghost@gmail.com";
-                const string petName="ted";
-                var pet = new Pet
-                {
-                    Name = petName,
-                    Owner = ownerId,
-                    Type = "Cat",
-                    Happiness = 0.0
-                };
-
-                var petRepository=new InMemoryPetRepository(PetDataUtilities.PetsData(ownerId));
-                var petFindService =new PetFindService(petRepository);
-                var petController=new PetController(petFindService);
-
+                const string userId = "jayconnerghost@gmail.com";
+                const string animalName= "eddy";
+               
+                var animalRepository=new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(userId));
+                var animalFindService =new AnimalFindService(animalRepository);
+                var animalController=new AnimalController(animalFindService);
+                var pettingController=new PettingController(animalFindService);
                 //act
-
+                pettingController.Pet(new AnimalIdentifier
+                {
+                    AnimalName = animalName,
+                    UserId = userId
+                });
+                
                 //assert
-                var petReturned=petController.Get(ownerId,petName);
-               // petReturned.Should().Be();
+                var animal=animalController.Get(userId,animalName);
+                animal.Happiness.Should().Be(1);
 
             }
         }

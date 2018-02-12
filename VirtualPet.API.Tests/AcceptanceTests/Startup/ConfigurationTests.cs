@@ -24,11 +24,11 @@ namespace VirtualPet.API.Tests.AcceptanceTests.Startup
                 const string expectedName="fred";
 
                 //act
-                var response = await _client.GetAsync("/api/pets/jayconnerghost@gmail.com");
+                var response = await _client.GetAsync("/api/animals/jayconnerghost@gmail.com");
                 response.EnsureSuccessStatusCode();
                 var responseString = await response.Content.ReadAsStringAsync();
                 //assert
-                var pets = JsonConvert.DeserializeObject<IEnumerable<Pet>>(responseString);
+                var pets = JsonConvert.DeserializeObject<List<Animal>>(responseString);
                 pets.First().Name.Should().Be(expectedName);
 
             }

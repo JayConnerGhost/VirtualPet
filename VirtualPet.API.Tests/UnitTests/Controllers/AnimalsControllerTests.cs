@@ -10,19 +10,19 @@ using Xunit;
 
 namespace VirtualPet.API.Tests.UnitTests.Controllers
 {
-     public class PetsControllerTests
+     public class AnimalsControllerTests
     {
         public class Get
         {
             [Fact]
-            public void Can_get_pets_for_user()
+            public void Can_get_animals_for_user()
             {
                 //arrange
                 const string userName = "jayconnerghost@gmail.com";
-                var preparedData = PetDataUtilities.PetsData(userName);
-                var repository = new InMemoryPetRepository(preparedData);
-                var service = new PetFindService(repository);
-                var controller = new PetsController(service);
+                var preparedData = AnimalDataUtilities.AnimalData(userName);
+                var repository = new InMemoryAnimalRepository(preparedData);
+                var service = new AnimalFindService(repository);
+                var controller = new AnimalsController(service);
 
                 //act
                 var result = controller.Get(userName);

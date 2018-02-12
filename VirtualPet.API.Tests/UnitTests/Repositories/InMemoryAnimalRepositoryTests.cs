@@ -4,46 +4,47 @@ using System.Linq;
 using System.Text;
 using FluentAssertions;
 using Remotion.Linq.Parsing.Structure.IntermediateModel;
+using VirtualPet.API.Tests.UnitTests.Models;
 using VirtualPet.Models;
 using Xunit;
 
 namespace VirtualPet.API.Tests.UnitTests.Repositories
 {
-     public class InMemoryPetRepositoryTests
+     public class InMemoryAnimalRepositoryTests
     {
       
         public class GetByUserId
         {
             [Fact]
-            public void Can_find_users_pets_by_userId()
+            public void Can_find_users_animals_by_userId()
             {
                 //arrange
                 var userId="test@tango.com";
 
                 //act
-                var count=new VirtualPet.Repositories.InMemoryPetRepository(new Pets
+                var count=new VirtualPet.Repositories.InMemoryAnimalRepository(new Animals
                 {
-                    new Pet
+                    new Cat
                       {
                           Owner="rinf@ted.com"
                       }  ,
-                    new Pet
+                    new Cat
                       {
                           Owner="ging@yang.com"
                       },
-                    new Pet
+                    new Cat
                       {
                           Owner=userId
                       },
-                    new Pet
+                    new Cat
                     {
                         Owner=userId
                     },
-                    new Pet
+                    new Cat
                     {
                         Owner=userId
                     },
-                    new Pet
+                    new Cat
                     {
                         Owner=userId
                     }
@@ -56,31 +57,31 @@ namespace VirtualPet.API.Tests.UnitTests.Repositories
             }
 
             [Fact]
-            public void Can_find_users_pet_by_userId()
+            public void Can_find_users_Animal_by_userId()
             {
                 //arrange
-                const string expectedPetName="freddy";
-                const string  expectedPetType="Cat";
+                const string expectedAnimalName="freddy";
+                const AnimalTypes expectedAnimalType = AnimalTypes.Cat;
                 const string userId = "test@tango.com";
-                var listOfPets = new Pets
+                var listOfAnimals = new Animals
                 {
-                    new Pet
+                    new Cat
                     {
-                        Name=expectedPetName,
-                        Type=expectedPetType,
+                        Name=expectedAnimalName,
+                        Type=AnimalTypes.Cat,
                         Owner=userId
                     }
                 };
 
                 //act
-                var repository=new VirtualPet.Repositories.InMemoryPetRepository(listOfPets);
-                var returnedPet=repository.GetByUserId(userId).First();
+                var repository=new VirtualPet.Repositories.InMemoryAnimalRepository(listOfAnimals);
+                var animal=repository.GetByUserId(userId).First();
 
 
 
                 //assert
-                returnedPet.Name.Should().Be(expectedPetName);
-                returnedPet.Type.Should().Be(expectedPetType);
+                animal.Name.Should().Be(expectedAnimalName);
+                animal.Type.Should().Be(expectedAnimalType);
             }
         }
     }

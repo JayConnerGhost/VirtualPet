@@ -15,17 +15,17 @@ namespace VirtualPet.Web.Controllers
     [Route("api/Petting")]
     public class PettingController : Controller
     {
-        private readonly IPetFindService _petFindingService;
+        private readonly IAnimalsFindService _animalsFindingService;
 
-        public PettingController(IPetFindService petFindingService)
+        public PettingController(IAnimalsFindService animalsFindingService)
         {
-            _petFindingService = petFindingService;
+            _animalsFindingService = animalsFindingService;
         }
 
         [HttpPut]
-        public HttpResponseMessage Pet(PetIdentifier pet)
+        public HttpResponseMessage Pet(AnimalIdentifier animal)
         {
-            _petFindingService.GetByIdentifier(pet);
+            _animalsFindingService.GetByIdentifier(animal);
             
                 
             

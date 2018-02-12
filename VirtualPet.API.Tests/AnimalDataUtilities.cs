@@ -2,33 +2,33 @@
 
 namespace VirtualPet.API.Tests
 {
-    public class PetDataUtilities
+    public class AnimalDataUtilities
     {
-        public static Pets PetsData(string userId)
+        public static Animals AnimalData(string userId)
         {
-            return new Pets
+            return new Animals
             {
-                new Pet
+                new Cat
                 {
-                    Type="Cat",
+                    Type=AnimalTypes.Cat,
                     Name="Tom",
                     Owner="fred@golf.com"
                 },
-                new Pet
+                new Cat
                 {
-                    Type="Dog",
+                    Type=AnimalTypes.Cat,
                     Name="Dave",
                     Owner="him@her.com"
                 },
-                new Pet
+                new Cat
                 {
-                    Type="Cat",
+                    Type=AnimalTypes.Cat,
                     Name="Tom",
                     Owner=userId
                 },
-                new Pet
+                new Cat
                 {
-                    Type="Cat",
+                    Type=AnimalTypes.Cat,
                     Name="eddy",
                     Owner=userId
                 }

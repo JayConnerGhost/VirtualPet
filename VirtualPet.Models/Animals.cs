@@ -2,7 +2,7 @@
 
 namespace VirtualPet.Models
 {
-    public class Pets : List<Pet>, IPets
+    public class Animals : List<IAnimal>, IAnimals
     {
         
     }

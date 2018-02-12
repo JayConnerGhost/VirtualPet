@@ -23,15 +23,15 @@ namespace VirtualPet.Web
             Configuration = configuration;
         }
 
-        private Pets SeedData()
+        private Animals SeedData()
         {
-            return new Pets
+            return new Animals
             {
-                new Pet
+                new Cat
                 {
                     Owner = "jayconnerghost@gmail.com",
                     Name = "fred",
-                    Type = "Dog"
+                    Type = AnimalTypes.Cat
                 }
             };
         }
@@ -42,13 +42,13 @@ namespace VirtualPet.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<IPets>(SeedData());
-            services.AddSingleton<IPetRepository, InMemoryPetRepository>();
-            services.AddTransient<IPetFindService, PetFindService>();
+            services.AddSingleton<IAnimals>(SeedData());
+            services.AddSingleton<IAnimalRepository, InMemoryAnimalRepository>();
+            services.AddTransient<IAnimalsFindService, AnimalFindService>();
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "VirtualPet API", Version = "v1" });
             });
         }
 
@@ -65,7 +65,7 @@ namespace VirtualPet.Web
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "VirtualPet API V1");
             });
 
             app.UseMvc();

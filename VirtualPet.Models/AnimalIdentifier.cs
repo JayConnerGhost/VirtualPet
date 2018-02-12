@@ -1,8 +1,8 @@
 ﻿namespace VirtualPet.Models
 {
-    public class PetIdentifier
+    public class AnimalIdentifier
     {
         public string UserId { set; get; }
-        public string PetName { set; get; }
+        public string AnimalName { set; get; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace VirtualPet.Models
 {
-    public interface IPets:IList<Pet>
+    public interface IAnimals:IList<IAnimal>
     {
     }
 }
