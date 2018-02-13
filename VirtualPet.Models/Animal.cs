@@ -8,10 +8,17 @@ namespace VirtualPet.Models
         public AnimalTypes Type { get; set; }
         public string Owner { get; set; }
         public int Happiness { get; set; }
+        public double Hunger { get; set; }
 
         public virtual void Pet()
         {
             Happiness++;
+        }
+
+
+        public virtual void Feed()
+        {
+            Hunger--;
         }
 
     }

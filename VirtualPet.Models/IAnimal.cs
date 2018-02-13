@@ -6,6 +6,8 @@
          AnimalTypes Type { get; }
          string Owner { get; set; }
          int Happiness { get; }
+         double Hunger { get; set; }
          void Pet();
+         void Feed();
     }
 }
