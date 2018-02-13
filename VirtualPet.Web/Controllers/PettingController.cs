@@ -16,19 +16,18 @@ namespace VirtualPet.Web.Controllers
     public class PettingController : Controller
     {
         private readonly IAnimalsFindService _animalsFindingService;
+        private readonly IAnimalPettingService _animalPettingService;
 
-        public PettingController(IAnimalsFindService animalsFindingService)
+        public PettingController(IAnimalsFindService animalsFindingService, IAnimalPettingService animalPettingService)
         {
             _animalsFindingService = animalsFindingService;
+            _animalPettingService = animalPettingService;
         }
 
         [HttpPut]
         public HttpResponseMessage Pet(AnimalIdentifier animal)
         {
-            _animalsFindingService.GetByIdentifier(animal);
-            
-                
-            
+            _animalPettingService.Pet(animal);
             return new HttpResponseMessage(HttpStatusCode.Accepted);
         }
     }

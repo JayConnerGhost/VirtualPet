@@ -5,18 +5,18 @@ namespace VirtualPet.Services
 {
     public class AnimalPettingService : IAnimalPettingService
     {
-        private AnimalFindService animalFindService;
-        private InMemoryAnimalRepository inMemoryAnimalRepository;
+        private readonly AnimalFindService _animalFindService;
+        private InMemoryAnimalRepository _inMemoryAnimalRepository;
 
         public AnimalPettingService(AnimalFindService animalFindService, InMemoryAnimalRepository inMemoryAnimalRepository)
         {
-            this.animalFindService = animalFindService;
-            this.inMemoryAnimalRepository = inMemoryAnimalRepository;
+            this._animalFindService = animalFindService;
+            this._inMemoryAnimalRepository = inMemoryAnimalRepository;
         }
 
         public void Pet(AnimalIdentifier animalIdentifier)
         {
-            var animal = animalFindService.GetByIdentifier(animalIdentifier);
+            var animal = _animalFindService.GetByIdentifier(animalIdentifier);
             animal.Pet();
         }
     }

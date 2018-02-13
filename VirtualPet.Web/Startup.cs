@@ -32,7 +32,14 @@ namespace VirtualPet.Web
                     Owner = "jayconnerghost@gmail.com",
                     Name = "fred",
                     Type = AnimalTypes.Cat
+                },
+                new Cat
+                {
+                    Owner="jayconnerghost@gmail.com",
+                    Name="silky",
+                    Type=AnimalTypes.Cat
                 }
+
             };
         }
 
