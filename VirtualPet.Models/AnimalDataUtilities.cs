@@ -35,7 +35,32 @@ namespace VirtualPet.Models
                     Type=AnimalTypes.Cat,
                     Name="eddy",
                     Owner=userId
+                },
+                new Dog
+                {
+                    Type=AnimalTypes.Dog,
+                    Name="tommy",
+                    Owner=userId
+                },
+                new Snake
+                {
+                    Type=AnimalTypes.Snake,
+                    Name="strike",
+                    Owner=userId
+                },
+                new Lizard
+                {
+                    Type=AnimalTypes.Lizard,
+                    Name="tails",
+                    Owner=userId
+                },
+                new Fish
+                {
+                    Type=AnimalTypes.Fish,
+                    Name="zoom",
+                    Owner=userId
                 }
+
             };
         }
     }

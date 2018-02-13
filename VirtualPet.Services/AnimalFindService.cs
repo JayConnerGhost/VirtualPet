@@ -4,7 +4,7 @@ using VirtualPet.Repositories;
 
 namespace VirtualPet.Services
 {
-    public class AnimalFindService:IAnimalsFindService
+    public class AnimalFindService:IAnimalFindService
     {
         private readonly IAnimalRepository _animalRepository;
 

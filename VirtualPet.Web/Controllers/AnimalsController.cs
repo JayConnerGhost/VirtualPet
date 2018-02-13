@@ -13,18 +13,18 @@ namespace VirtualPet.Web.Controllers
     [Route("api/Animals")]
     public class AnimalsController : Controller
     {
-        private readonly IAnimalsFindService _animalsFindService;
+        private readonly IAnimalFindService _animalFindService;
 
-        public AnimalsController(IAnimalsFindService animalsFindService)
+        public AnimalsController(IAnimalFindService animalFindService)
         {
-            _animalsFindService = animalsFindService;
+            _animalFindService = animalFindService;
         }
         
         // GET api/animals/fred@ted.com
         [HttpGet("{userName}")]
         public IEnumerable<IAnimal> Get(string userName)
         {
-            return _animalsFindService.GetByUserId(userName);
+            return _animalFindService.GetByUserId(userName);
         }
     }
 }

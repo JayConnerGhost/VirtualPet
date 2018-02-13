@@ -29,7 +29,7 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 var count = result.Count();
 
                 //assert
-                count.Should().Be(2);
+                count.Should().Be(6);
             }
 
            

@@ -10,6 +10,7 @@ namespace VirtualPet.API.Tests.AcceptanceTests
 {
     public class Users_have_animals:BaseWebTest
     {
+     
         [Fact]
         public async Task Can_get_animal_by_user_email_address()
         {

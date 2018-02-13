@@ -80,7 +80,7 @@ namespace VirtualPet.API.Tests.UnitTests.Services
                 )).GetByUserId(userId).Count();
                 
                 //Assert
-                count.Should().Be(2);
+                count.Should().Be(6);
             }
 
             

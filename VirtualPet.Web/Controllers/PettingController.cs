@@ -15,12 +15,12 @@ namespace VirtualPet.Web.Controllers
     [Route("api/Petting")]
     public class PettingController : Controller
     {
-        private readonly IAnimalsFindService _animalsFindingService;
+        private readonly IAnimalFindService _animalFindingService;
         private readonly IAnimalPettingService _animalPettingService;
 
-        public PettingController(IAnimalsFindService animalsFindingService, IAnimalPettingService animalPettingService)
+        public PettingController(IAnimalFindService animalFindingService, IAnimalPettingService animalPettingService)
         {
-            _animalsFindingService = animalsFindingService;
+            _animalFindingService = animalFindingService;
             _animalPettingService = animalPettingService;
         }
 

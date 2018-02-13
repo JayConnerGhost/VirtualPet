@@ -5,10 +5,10 @@ namespace VirtualPet.Services
 {
     public class AnimalPettingService : IAnimalPettingService
     {
-        private readonly AnimalFindService _animalFindService;
-        private InMemoryAnimalRepository _inMemoryAnimalRepository;
+        private readonly IAnimalFindService _animalFindService;
+        private IAnimalRepository _inMemoryAnimalRepository;
 
-        public AnimalPettingService(AnimalFindService animalFindService, InMemoryAnimalRepository inMemoryAnimalRepository)
+        public AnimalPettingService(IAnimalFindService animalFindService, IAnimalRepository inMemoryAnimalRepository)
         {
             this._animalFindService = animalFindService;
             this._inMemoryAnimalRepository = inMemoryAnimalRepository;
