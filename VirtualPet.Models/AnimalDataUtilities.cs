@@ -1,9 +1,13 @@
-﻿using VirtualPet.Models;
+﻿using System.Collections.Generic;
 
-namespace VirtualPet.API.Tests
+namespace VirtualPet.Models
 {
     public class AnimalDataUtilities
     {
+        public static AnimalHappinessValues HappinessConfig()
+        {
+           return new AnimalHappinessValues();
+        }
         public static Animals AnimalData(string userId)
         {
             return new Animals
@@ -33,6 +37,18 @@ namespace VirtualPet.API.Tests
                     Owner=userId
                 }
             };
+        }
+    }
+
+    public class AnimalHappinessValues : Dictionary<AnimalTypes, int>
+    {
+        public AnimalHappinessValues()
+        {
+            this.Add(AnimalTypes.Cat,2);
+            this.Add(AnimalTypes.Dog,1);
+            this.Add(AnimalTypes.Snake,3);
+            this.Add(AnimalTypes.Fish,4);
+            this.Add(AnimalTypes.Lizard,5);
         }
     }
 }

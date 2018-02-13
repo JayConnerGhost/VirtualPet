@@ -2,6 +2,10 @@
 {
     public enum AnimalTypes
     {
-        Cat
+        Cat,
+        Dog,
+        Snake,
+        Fish,
+        Lizard
     }
 }
