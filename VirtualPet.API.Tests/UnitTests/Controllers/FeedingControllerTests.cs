@@ -41,12 +41,8 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 lizardReference1.Hunger.Should().Be(0);
 
                 //act
-                feedingController.Feed(new AnimalIdentifier
-                {
-                    UserId = UserId,
-                    AnimalName = LizardName
-                });
-
+                feedingController.Feed(new AnimalIdentifier(UserId, LizardName));
+               
                 //assert
                 var lizardReference2 = animalController.Get(UserId, LizardName);
                 lizardReference2.Hunger.Should().Be(-5);
@@ -63,12 +59,8 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 fishReference1.Hunger.Should().Be(0);
 
                 //act
-                feedingController.Feed(new AnimalIdentifier
-                {
-                    UserId = UserId,
-                    AnimalName = fishName
-                });
-
+                feedingController.Feed(new AnimalIdentifier(UserId, fishName));
+               
                 //assert
                 var fishReference2 = animalController.Get(UserId, fishName);
                 fishReference2.Hunger.Should().Be(-4);
@@ -85,12 +77,8 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 snakeReference1.Hunger.Should().Be(0);
 
                 //act
-                feedingController.Feed(new AnimalIdentifier
-                {
-                    UserId = UserId,
-                    AnimalName = snakeName
-                });
-
+                feedingController.Feed(new AnimalIdentifier(UserId, snakeName));
+               
                 //assert
                 var snakeReference2 = animalController.Get(UserId, snakeName);
                 snakeReference2.Hunger.Should().Be(-3);
@@ -107,12 +95,8 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 dogReference1.Hunger.Should().Be(0);
 
                 //act
-                feedingController.Feed(new AnimalIdentifier
-                {
-                    UserId = UserId,
-                    AnimalName = dogName
-                });
-
+                feedingController.Feed(new AnimalIdentifier(UserId, dogName));
+                
                 //assert
                 var dogReference2 = animalController.Get(UserId, dogName);
                 dogReference2.Hunger.Should().Be(-1);
@@ -122,21 +106,18 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Feeding_cat_reduces_hunger_by_2()
             {
                 //arrange
-                const string animalName = "eddy";
+                const string catName = "eddy";
 
                 //check precondition 
-                var catReference1 = animalController.Get(UserId, animalName);
+                var catReference1 = animalController.Get(UserId, catName);
                 catReference1.Hunger.Should().Be(0);
 
                 //act
-                feedingController.Feed(new AnimalIdentifier
-                {
-                    UserId = UserId,
-                    AnimalName = animalName
-                });
+                feedingController.Feed(new AnimalIdentifier(UserId, catName));
+                
 
                 //assert
-                var catReference2 = animalController.Get(UserId, animalName);
+                var catReference2 = animalController.Get(UserId, catName);
                 catReference2.Hunger.Should().Be(-2);
 
             }
@@ -152,12 +133,8 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 animalReference1.Hunger.Should().Be(0);
 
                 //act
-                feedingController.Feed(new AnimalIdentifier
-                {
-                    UserId = UserId,
-                    AnimalName = animalName
-                });
-
+                feedingController.Feed(new AnimalIdentifier(UserId, animalName));
+               
                 //assert
                 var animalReference2 = animalController.Get(UserId, animalName);
                 animalReference2.Hunger.Should().Be(-2);

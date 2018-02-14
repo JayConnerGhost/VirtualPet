@@ -4,6 +4,12 @@ namespace VirtualPet.Models
 {
     public class Animal:IAnimal
     {
+        public Animal()
+        {
+            Hunger = 0;
+            Happiness = 0;
+        }
+
         public string Name { get; set; }
         public AnimalTypes Type { get; set; }
         public string Owner { get; set; }

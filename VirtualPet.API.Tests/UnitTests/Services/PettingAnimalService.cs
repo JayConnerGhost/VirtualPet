@@ -15,33 +15,21 @@ namespace VirtualPet.API.Tests.UnitTests.Services
             {
                 //arrange
                 const string userId="jayconnerghost@gmail.com";
-                const string petName="eddy";
+                const string animalName="eddy";
                 var data = AnimalDataUtilities.AnimalData(userId);
                 var inMemoryAnimalRepository = new InMemoryAnimalRepository(data);
                 var animalFindService = new AnimalFindService(inMemoryAnimalRepository);
                 var animalPettingService = new AnimalPettingService(animalFindService, inMemoryAnimalRepository);
                 //preCondition-Check
-                var petPrePetting = animalFindService.GetByIdentifier(new AnimalIdentifier
-                {
-                    UserId = userId,
-                    AnimalName = petName
-                });
+                var petPrePetting = animalFindService.GetByIdentifier(new AnimalIdentifier(userId, animalName));
                 petPrePetting.Happiness.Should().Be(0);
 
                 //act
-                animalPettingService.Pet(new AnimalIdentifier
-                {
-                    UserId = userId,
-                    AnimalName = petName
-                });
-
-
+                animalPettingService.Pet(new AnimalIdentifier(userId,animalName));
+               
                 //assert
-                var petPostPetting = animalFindService.GetByIdentifier(new AnimalIdentifier
-                {
-                    UserId = userId,
-                    AnimalName = petName
-                });
+                var petPostPetting = animalFindService.GetByIdentifier(new AnimalIdentifier(userId,animalName));
+    
                 petPostPetting.Happiness.Should().Be(2);
             }
         }

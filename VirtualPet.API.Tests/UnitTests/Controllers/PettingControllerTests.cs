@@ -33,17 +33,14 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             {
                 //arrange
               
-                const string animalName = "eddy";
+                const string dogName = "eddy";
 
                 //act
-                pettingController.Pet(new AnimalIdentifier
-                {
-                    AnimalName = animalName,
-                    UserId = UserId
-                });
+                pettingController.Pet(new AnimalIdentifier(UserId, dogName));
+               
 
                 //assert
-                var animal = animalController.Get(UserId, animalName);
+                var animal = animalController.Get(UserId, dogName);
                 animal.Happiness.Should().Be(2);
 
             }
@@ -52,22 +49,13 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Happiness_of_a_cat_increases_by_2_when_petted()
             {
                 //arrange
-              
-                const string animalName= "tommy";
+                const string catName= "tommy";
                
-                var animalRepository=new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
-                var animalFindService =new AnimalFindService(animalRepository);
-                var animalController=new AnimalController(animalFindService);
-                var pettingController=new PettingController(animalFindService,new AnimalPettingService(animalFindService,animalRepository));
-                //act
-                pettingController.Pet(new AnimalIdentifier
-                {
-                    AnimalName = animalName,
-                    UserId = UserId
-                });
-                
+                  //act
+                pettingController.Pet(new AnimalIdentifier(UserId, catName));
+              
                 //assert
-                var animal=animalController.Get(UserId,animalName);
+                var animal=animalController.Get(UserId,catName);
                 animal.Happiness.Should().Be(1);
 
             }
@@ -77,21 +65,13 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             {
                 //arrange
                 
-                const string animalName = "tails";
-
-                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
-                var animalFindService = new AnimalFindService(animalRepository);
-                var animalController = new AnimalController(animalFindService);
-                var pettingController = new PettingController(animalFindService, new AnimalPettingService(animalFindService, animalRepository));
+                const string lizardName = "tails";
+                
                 //act
-                pettingController.Pet(new AnimalIdentifier
-                {
-                    AnimalName = animalName,
-                    UserId = UserId
-                });
-
+                pettingController.Pet(new AnimalIdentifier(UserId,lizardName));
+                
                 //assert
-                var animal = animalController.Get(UserId, animalName);
+                var animal = animalController.Get(UserId, lizardName);
                 animal.Happiness.Should().Be(5);
 
             }
@@ -100,21 +80,12 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             {
                 //arrange
      
-                const string animalName = "strike";
-
-                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
-                var animalFindService = new AnimalFindService(animalRepository);
-                var animalController = new AnimalController(animalFindService);
-                var pettingController = new PettingController(animalFindService, new AnimalPettingService(animalFindService, animalRepository));
+                const string snakeName = "strike";
                 //act
-                pettingController.Pet(new AnimalIdentifier
-                {
-                    AnimalName = animalName,
-                    UserId = UserId
-                });
-
+                pettingController.Pet(new AnimalIdentifier(UserId, snakeName));
+                
                 //assert
-                var animal = animalController.Get(UserId, animalName);
+                var animal = animalController.Get(UserId, snakeName);
                 animal.Happiness.Should().Be(3);
 
             }
@@ -123,21 +94,13 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             {
                 //arrange
      
-                const string animalName = "zoom";
-
-                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
-                var animalFindService = new AnimalFindService(animalRepository);
-                var animalController = new AnimalController(animalFindService);
-                var pettingController = new PettingController(animalFindService, new AnimalPettingService(animalFindService, animalRepository));
+                const string fishName = "zoom";
+                
                 //act
-                pettingController.Pet(new AnimalIdentifier
-                {
-                    AnimalName = animalName,
-                    UserId = UserId
-                });
-
+                pettingController.Pet(new AnimalIdentifier(UserId, fishName));
+                
                 //assert
-                var animal = animalController.Get(UserId, animalName);
+                var animal = animalController.Get(UserId, fishName);
                 animal.Happiness.Should().Be(4);
 
             }

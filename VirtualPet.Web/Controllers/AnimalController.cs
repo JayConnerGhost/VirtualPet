@@ -25,12 +25,7 @@ namespace VirtualPet.Web.Controllers
         [HttpGet()]
         public IAnimal Get(string userId, string animalName)
         {
-            return _animalFindService.GetByIdentifier(new AnimalIdentifier
-            {
-                AnimalName = animalName,
-                UserId = userId
-            });
-            
+            return _animalFindService.GetByIdentifier(new AnimalIdentifier(userId, animalName));
         }
     }
 

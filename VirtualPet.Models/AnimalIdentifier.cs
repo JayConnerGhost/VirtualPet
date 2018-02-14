@@ -2,7 +2,13 @@
 {
     public class AnimalIdentifier
     {
-        public string UserId { set; get; }
-        public string AnimalName { set; get; }
+        public AnimalIdentifier(string userId, string animalName)
+        {
+            UserId = userId;
+            AnimalName = animalName;
+        }
+
+        public string UserId { private set; get; }
+        public string AnimalName { private set; get; }
     }
 }

@@ -20,11 +20,8 @@ namespace VirtualPet.API.Tests.UnitTests.Services
                 var service =new VirtualPet.Services.AnimalFindService(repository);
 
                 //act
-                var identifier = new AnimalIdentifier
-                {
-                    UserId = userId,
-                    AnimalName = animalName
-                };
+                var identifier = new AnimalIdentifier(userId, animalName);
+                
                 service.GetByIdentifier(identifier);
 
                 //assert
@@ -35,20 +32,16 @@ namespace VirtualPet.API.Tests.UnitTests.Services
             public void Can_find_animal_by_userId_and_AnimalName()
             {
                 //arrange
-                const string name = "Tom";
+                const string animalName = "Tom";
                 const string userId = "test@test.com";
                 const AnimalTypes type = AnimalTypes.Cat;
                 var repository =new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(userId));
                 var service = new VirtualPet.Services.AnimalFindService(repository);
                 //act
-                var returnedAnimal=service.GetByIdentifier(new AnimalIdentifier
-                {
-                    AnimalName=name,
-                    UserId=userId
-                } );
-
+                var returnedAnimal = service.GetByIdentifier(new AnimalIdentifier(userId, animalName));
+                
                 //assert
-                returnedAnimal.Name.Should().Be(name);
+                returnedAnimal.Name.Should().Be(animalName);
                 returnedAnimal.Owner.Should().Be(userId);
                 returnedAnimal.Type.Should().Be(type);
 
