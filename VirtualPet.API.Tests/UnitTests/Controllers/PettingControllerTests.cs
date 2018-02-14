@@ -12,7 +12,7 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
 {
     public class PettingControllerTests
     {
-        public class Set
+        public class Put
         {
             [Fact]
             public void Happiness_of_a_dog_increases_by_1_when_petted()
