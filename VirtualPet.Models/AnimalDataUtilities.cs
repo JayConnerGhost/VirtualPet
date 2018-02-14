@@ -4,6 +4,10 @@ namespace VirtualPet.Models
 {
     public class AnimalDataUtilities
     {
+        public static AnimalFeedValues FeedConfig()
+        {
+            return new AnimalFeedValues();
+        }
         public static AnimalHappinessValues HappinessConfig()
         {
            return new AnimalHappinessValues();
@@ -74,6 +78,18 @@ namespace VirtualPet.Models
             this.Add(AnimalTypes.Snake,3);
             this.Add(AnimalTypes.Fish,4);
             this.Add(AnimalTypes.Lizard,5);
+        }
+    }
+
+    public class AnimalFeedValues : Dictionary<AnimalTypes, int>
+    {
+        public AnimalFeedValues()
+        {
+            this.Add(AnimalTypes.Cat, 2);
+            this.Add(AnimalTypes.Dog, 1);
+            this.Add(AnimalTypes.Snake, 3);
+            this.Add(AnimalTypes.Fish, 4);
+            this.Add(AnimalTypes.Lizard, 5);
         }
     }
 }
