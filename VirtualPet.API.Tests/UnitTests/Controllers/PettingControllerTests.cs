@@ -14,26 +14,36 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
     {
         public class Put
         {
+            InMemoryAnimalRepository animalRepository;
+            AnimalFindService animalFindService;
+            AnimalController animalController;
+            PettingController pettingController;
+            const string UserId = "jayconnerghost@gmail.com";
+
+            public Put()
+            {
+                animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
+                animalFindService = new AnimalFindService(animalRepository);
+                animalController = new AnimalController(animalFindService);
+                pettingController = new PettingController(animalFindService, new AnimalPettingService(animalFindService, animalRepository));
+            }
+
             [Fact]
             public void Happiness_of_a_dog_increases_by_1_when_petted()
             {
                 //arrange
-                const string userId = "jayconnerghost@gmail.com";
+              
                 const string animalName = "eddy";
 
-                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(userId));
-                var animalFindService = new AnimalFindService(animalRepository);
-                var animalController = new AnimalController(animalFindService);
-                var pettingController = new PettingController(animalFindService, new AnimalPettingService(animalFindService, animalRepository));
                 //act
                 pettingController.Pet(new AnimalIdentifier
                 {
                     AnimalName = animalName,
-                    UserId = userId
+                    UserId = UserId
                 });
 
                 //assert
-                var animal = animalController.Get(userId, animalName);
+                var animal = animalController.Get(UserId, animalName);
                 animal.Happiness.Should().Be(2);
 
             }
@@ -42,10 +52,10 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Happiness_of_a_cat_increases_by_2_when_petted()
             {
                 //arrange
-                const string userId = "jayconnerghost@gmail.com";
+              
                 const string animalName= "tommy";
                
-                var animalRepository=new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(userId));
+                var animalRepository=new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
                 var animalFindService =new AnimalFindService(animalRepository);
                 var animalController=new AnimalController(animalFindService);
                 var pettingController=new PettingController(animalFindService,new AnimalPettingService(animalFindService,animalRepository));
@@ -53,11 +63,11 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 pettingController.Pet(new AnimalIdentifier
                 {
                     AnimalName = animalName,
-                    UserId = userId
+                    UserId = UserId
                 });
                 
                 //assert
-                var animal=animalController.Get(userId,animalName);
+                var animal=animalController.Get(UserId,animalName);
                 animal.Happiness.Should().Be(1);
 
             }
@@ -66,10 +76,10 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Happiness_of_a_lizard_increases_by_5_when_petted()
             {
                 //arrange
-                const string userId = "jayconnerghost@gmail.com";
+                
                 const string animalName = "tails";
 
-                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(userId));
+                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
                 var animalFindService = new AnimalFindService(animalRepository);
                 var animalController = new AnimalController(animalFindService);
                 var pettingController = new PettingController(animalFindService, new AnimalPettingService(animalFindService, animalRepository));
@@ -77,11 +87,11 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 pettingController.Pet(new AnimalIdentifier
                 {
                     AnimalName = animalName,
-                    UserId = userId
+                    UserId = UserId
                 });
 
                 //assert
-                var animal = animalController.Get(userId, animalName);
+                var animal = animalController.Get(UserId, animalName);
                 animal.Happiness.Should().Be(5);
 
             }
@@ -89,10 +99,10 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Happiness_of_a_snake_increases_by_3_when_petted()
             {
                 //arrange
-                const string userId = "jayconnerghost@gmail.com";
+     
                 const string animalName = "strike";
 
-                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(userId));
+                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
                 var animalFindService = new AnimalFindService(animalRepository);
                 var animalController = new AnimalController(animalFindService);
                 var pettingController = new PettingController(animalFindService, new AnimalPettingService(animalFindService, animalRepository));
@@ -100,11 +110,11 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 pettingController.Pet(new AnimalIdentifier
                 {
                     AnimalName = animalName,
-                    UserId = userId
+                    UserId = UserId
                 });
 
                 //assert
-                var animal = animalController.Get(userId, animalName);
+                var animal = animalController.Get(UserId, animalName);
                 animal.Happiness.Should().Be(3);
 
             }
@@ -112,10 +122,10 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
             public void Happiness_of_a_fish_increases_by_4_when_petted()
             {
                 //arrange
-                const string userId = "jayconnerghost@gmail.com";
+     
                 const string animalName = "zoom";
 
-                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(userId));
+                var animalRepository = new InMemoryAnimalRepository(AnimalDataUtilities.AnimalData(UserId));
                 var animalFindService = new AnimalFindService(animalRepository);
                 var animalController = new AnimalController(animalFindService);
                 var pettingController = new PettingController(animalFindService, new AnimalPettingService(animalFindService, animalRepository));
@@ -123,11 +133,11 @@ namespace VirtualPet.API.Tests.UnitTests.Controllers
                 pettingController.Pet(new AnimalIdentifier
                 {
                     AnimalName = animalName,
-                    UserId = userId
+                    UserId = UserId
                 });
 
                 //assert
-                var animal = animalController.Get(userId, animalName);
+                var animal = animalController.Get(UserId, animalName);
                 animal.Happiness.Should().Be(4);
 
             }
