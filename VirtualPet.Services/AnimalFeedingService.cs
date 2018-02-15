@@ -5,9 +5,9 @@ namespace VirtualPet.Services
 {
     public class AnimalFeedingService : IAnimalFeedingService
     {
-        private readonly AnimalFindService _animalFindService;
+        private readonly IAnimalFindService _animalFindService;
 
-        public AnimalFeedingService(AnimalFindService animalFindService)
+        public AnimalFeedingService(IAnimalFindService animalFindService)
         {
             _animalFindService = animalFindService;
         }

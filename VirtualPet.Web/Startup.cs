@@ -53,6 +53,7 @@ namespace VirtualPet.Web
             services.AddSingleton<IAnimalRepository, InMemoryAnimalRepository>();
             services.AddTransient<IAnimalFindService, AnimalFindService>();
             services.AddTransient<IAnimalPettingService, AnimalPettingService>();
+            services.AddTransient<IAnimalFeedingService, AnimalFeedingService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "VirtualPet API", Version = "v1" });

@@ -10,10 +10,12 @@
         public override void Pet()
         {
             Happiness = (Happiness + AnimalDataUtilities.HappinessConfig()[AnimalTypes.Fish]);
+            base.Pet();
         }
         public override void Feed()
         {
             Hunger = (Hunger - AnimalDataUtilities.FeedConfig()[AnimalTypes.Fish]);
+            base.Feed();
         }
     }
 }
