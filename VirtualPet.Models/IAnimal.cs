@@ -7,7 +7,7 @@ namespace VirtualPet.Models
          string Name { get; set; }
          AnimalTypes Type { get; }
          string Owner { get; set; }
-         double Happiness { get; }
+         double Happiness { get; set; }
          double Hunger { get; set; }
          DateTime? LastFed { get; set; }
          DateTime? LastPetted { get; set; }

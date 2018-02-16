@@ -8,7 +8,7 @@
         }
         public override void Pet()
         {
-            Happiness = (Happiness + AnimalDataUtilities.HappinessConfig()[AnimalTypes.Cat]);
+            
             base.Pet();
         }
 

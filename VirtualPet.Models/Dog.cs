@@ -9,7 +9,7 @@
 
         public override void Pet()
         {
-            Happiness = (Happiness + AnimalDataUtilities.HappinessConfig()[AnimalTypes.Dog]);
+            
             base.Pet();
         }
 
